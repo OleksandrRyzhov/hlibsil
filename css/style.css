@@ -286,6 +286,7 @@ h3 {
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
+  transition: background-color 0.2s;
 }
 
 .btn--support {
@@ -562,11 +563,6 @@ h3 {
   border: 0.0625rem solid var(--borderColor);
 }
 
-.page__top .goal__container {
-  margin: 0 -1.25rem;
-  width: calc(100% + 2.5rem);
-}
-
 .goal__tag {
   font-weight: 300;
   font-size: 0.75rem;
@@ -580,8 +576,8 @@ h3 {
 
 .goal__amount {
   font-weight: 400;
-  line-height: 1.75rem;
   font-size: 0.75rem;
+  line-height: 1.75rem;
   margin-bottom: 0.5rem;
 }
 
@@ -666,6 +662,16 @@ h3 {
   padding: 2rem 1.25rem 0;
 }
 
+.top__titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top__titles:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
 .top__title {
   color: var(--darkBlueColor);
 }
@@ -677,10 +683,6 @@ h3 {
 .top__text {
   font-size: 1.0625rem;
   line-height: 1.4117647059;
-}
-
-.top__text:not(:last-child) {
-  margin-bottom: 2.5rem;
 }
 
 .about__container {
@@ -1129,6 +1131,13 @@ body:not(.user-is-tabbing) .copy-btn:focus {
   width: 50%;
 }
 
+.transaction__history th:nth-child(2),
+.transaction__history th:nth-child(3),
+.transaction__history td:nth-child(2),
+.transaction__history td:nth-child(3) {
+  margin-left: 10%;
+}
+
 .transaction__history thead tr {
   border-bottom: 0.0625rem solid var(--tableBorderColor);
   padding-bottom: 0.75rem;
@@ -1362,18 +1371,6 @@ body:not(.user-is-tabbing) .copy-btn:focus {
   }
 }
 
-@media (min-width: 28.75em) {
-  .transaction__history th,
-  .transaction__history td {
-    width: 40%;
-  }
-
-  .transaction__history th:nth-child(1),
-  .transaction__history td:nth-child(1) {
-    width: 20%;
-  }
-}
-
 @media (min-width: 31.25em) {
   .popup__content {
     padding: 1.875rem 3.125rem;
@@ -1431,11 +1428,6 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 
   .switch-language__link {
     padding: 0.625rem 0.75rem;
-  }
-
-  .page__top .goal__container {
-    width: 31.25rem;
-    margin: 0 0 0 auto;
   }
 
   .top__container {
@@ -1761,7 +1753,6 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 
 @media (min-width: 56.25em), (min-width: 53.75em) {
   .goal__container {
-    width: 100%;
     margin: 0;
     top: 5.25rem;
     bottom: 0;
@@ -1940,7 +1931,7 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 
   .top {
     margin-top: 0.5rem;
-    min-height: 23.4375rem;
+    min-height: 24.1875rem;
     border-radius: 1.875rem;
   }
 
@@ -2081,6 +2072,13 @@ body:not(.user-is-tabbing) .copy-btn:focus {
     font-size: 2.375rem;
   }
 
+  .transaction__history th:nth-child(2),
+  .transaction__history th:nth-child(3),
+  .transaction__history td:nth-child(2),
+  .transaction__history td:nth-child(3) {
+    margin-left: 33%;
+  }
+
   .faq {
     margin-bottom: 5rem;
     max-width: 48.75rem;
@@ -2112,6 +2110,18 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 
   .popup__title {
     padding: 0 1.25rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .page__top .goal__container {
+    width: auto;
+    max-width: 31.25rem;
+    margin: 0;
+  }
+
+  .top__titles {
+    margin: 0;
   }
 }
 
@@ -2156,6 +2166,11 @@ body:not(.user-is-tabbing) .copy-btn:focus {
     align-items: center;
     gap: 0.5rem;
   }
+
+  .page__top .goal__container {
+    margin: 0 -1.25rem;
+    width: calc(100% + 2.5rem);
+  }
 }
 
 @media (max-width: 22.49875em) {
@@ -2181,10 +2196,46 @@ body:not(.user-is-tabbing) .copy-btn:focus {
   }
 }
 
+@media (min-width: 48em) and (max-width: 53.74875em) {
+  .top__container {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 21.25rem 1fr;
+    padding-bottom: 2rem;
+  }
+}
+
 @media (max-width: 53.74875em) and (min-width: 43.75em) {
   .requisites__inner {
     display: grid;
     grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: 22.5em) and (max-width: 28.74875em) {
+  .transaction__history th:nth-child(2),
+  .transaction__history th:nth-child(3),
+  .transaction__history td:nth-child(2),
+  .transaction__history td:nth-child(3) {
+    margin-left: 17%;
+  }
+}
+
+@media (min-width: 28.75em) and (max-width: 47.99875em) {
+  .transaction__history th:nth-child(2),
+  .transaction__history th:nth-child(3),
+  .transaction__history td:nth-child(2),
+  .transaction__history td:nth-child(3) {
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 66.24875em) {
+  .transaction__history th:nth-child(2),
+  .transaction__history th:nth-child(3),
+  .transaction__history td:nth-child(2),
+  .transaction__history td:nth-child(3) {
+    margin-left: 35%;
   }
 }
 
