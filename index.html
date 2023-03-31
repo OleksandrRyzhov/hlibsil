@@ -215,7 +215,7 @@
 												<p class="crypto__address" id="copyXRPText">rM4ryL2c5Ri4XBC7kMH7XAXmn3TWeAaa6L</p>
 											</div>
 											<div class="crypto__actions">
-												<button class="qr-code _icon-qr-scan" id="qrCodeCryptoXRP" data-popup="#popupXRP" aria-label="Показати XRP QR-code"><span class="tooltip" id="qrXRPTooltip" role="tooltip">Показати QR-code</span></button>
+												<button class="qr-code _icon-qr-scan" id="qrCodeXRPbtn" data-popup="#qrCodeXRP" aria-label="Показати XRP QR-code"><span class="tooltip" id="qrXRPTooltip" role="tooltip">Показати QR-code</span></button>
 												<button class="copy-btn _icon-copy" id="copyXRP" aria-label="Копіювати XRP адресу"><span class="tooltip" id="copyXRPTooltip" role="tooltip">Копіювати</span></button>
 											</div>
 										</div>
@@ -225,7 +225,7 @@
 												<p class="crypto__address" id="copyUSDTText">TCmUQ3ntw5Ma6JLTjutJHoZ22rbEwvEcCU</p>
 											</div>
 											<div class="crypto__actions">
-												<button class="qr-code _icon-qr-scan" id="qrCodeCryptoUSDT" data-popup="#popupUSDT" aria-label="Показати USDT QR-code"><span class="tooltip" id="qrUSDTTooltip" role="tooltip">Показати QR-code</span></button>
+												<button class="qr-code _icon-qr-scan" id="qrCodeUSDTbtn" data-popup="#qrCodeUSDT" aria-label="Показати USDT QR-code"><span class="tooltip" id="qrUSDTTooltip" role="tooltip">Показати QR-code</span></button>
 												<button class="copy-btn _icon-copy" id="copyUSDT" aria-label="Копіювати USDT адресу"><span class="tooltip" id="copyUSDTTooltip" role="tooltip">Копіювати</span></button>
 											</div>
 										</div>
@@ -235,7 +235,7 @@
 												<p class="crypto__address" id="copyETHText">0xB0f76c1C38409D0b9305284Cc65a79D0b2b84bE1</p>
 											</div>
 											<div class="crypto__actions">
-												<button class="qr-code _icon-qr-scan" id="qrCodeCryptoETH" data-popup="#popupETH" aria-label="Показати ETH QR-code"><span class="tooltip" id="qrETHTooltip" role="tooltip">Показати QR-code</span></button>
+												<button class="qr-code _icon-qr-scan" id="qrCodeETHbtn" data-popup="#qrCodeETH" aria-label="Показати ETH QR-code"><span class="tooltip" id="qrETHTooltip" role="tooltip">Показати QR-code</span></button>
 												<button class="copy-btn _icon-copy" id="copyETH" aria-label="Копіювати ETH адресу"><span class="tooltip" id="copyETHTooltip" role="tooltip">Копіювати</span></button>
 											</div>
 										</div>
@@ -245,7 +245,7 @@
 												<p class="crypto__address" id="copyBTCText">bc1qwmgy2wjcu49vrmq88ht9mxntweqsak0c8lshmc</p>
 											</div>
 											<div class="crypto__actions">
-												<button class="qr-code _icon-qr-scan" id="qrCodeCryptoBTC" data-popup="#popupBTC" aria-label="Показати BTC QR-code"><span class="tooltip" id="qrBTCTooltip" role="tooltip">Показати QR-code</span></button>
+												<button class="qr-code _icon-qr-scan" id="qrCodeBTCbtn" data-popup="#qrCodeBTC" aria-label="Показати BTC QR-code"><span class="tooltip" id="qrBTCTooltip" role="tooltip">Показати QR-code</span></button>
 												<button class="copy-btn _icon-copy" id="copyBTC" aria-label="Копіювати BTC адресу"><span class="tooltip" id="copyBTCTooltip" role="tooltip">Копіювати</span></button>
 											</div>
 										</div>
@@ -353,10 +353,10 @@
 					Слава Україні!</p>
 			</footer>
     </div>
-    <div class="popup" id="popupXRP" aria-hidden="true">
+    <div class="popup" id="qrCodeXRP" aria-hidden="true">
       <div class="popup__body">
         <div class="popup__content" role="dialog" aria-modal="true">
-          <button class="btn-close popup__btn-close popup-close"></button>
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
           <div class="popup__title">Відскануй qr-code</div>
           <picture class="popup__picture">
             <source data-srcset="img/popup/qr-xrp.webp" srcset="img/1x1.webp" type="image/webp">
@@ -365,10 +365,10 @@
         </div>
       </div>
     </div>
-    <div class="popup" id="popupUSDT" aria-hidden="true">
+    <div class="popup" id="qrCodeUSDT" aria-hidden="true">
       <div class="popup__body">
         <div class="popup__content" role="dialog" aria-modal="true">
-          <button class="btn-close popup__btn-close popup-close"></button>
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
           <div class="popup__title">Відскануй qr-code</div>
           <picture class="popup__picture">
             <source data-srcset="img/popup/qr-usdt.webp" srcset="img/1x1.webp" type="image/webp">
@@ -377,10 +377,10 @@
         </div>
       </div>
     </div>
-    <div class="popup" id="popupETH" aria-hidden="true">
+    <div class="popup" id="qrCodeETH" aria-hidden="true">
       <div class="popup__body">
         <div class="popup__content" role="dialog" aria-modal="true">
-          <button class="btn-close popup__btn-close popup-close"></button>
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
           <div class="popup__title">Відскануй qr-code</div>
           <picture class="popup__picture">
             <source data-srcset="img/popup/qr-eth.webp" srcset="img/1x1.webp" type="image/webp">
@@ -389,10 +389,10 @@
         </div>
       </div>
     </div>
-    <div class="popup" id="popupBTC" aria-hidden="true">
+    <div class="popup" id="qrCodeBTC" aria-hidden="true">
       <div class="popup__body">
         <div class="popup__content" role="dialog" aria-modal="true">
-          <button class="btn-close popup__btn-close popup-close"></button>
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
           <div class="popup__title">Відскануй qr-code</div>
           <picture class="popup__picture">
             <source data-srcset="img/popup/qr-btc.webp" srcset="img/1x1.webp" type="image/webp">

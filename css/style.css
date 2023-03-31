@@ -835,9 +835,9 @@ h3 {
 .donation__input {
   width: 100%;
   font-weight: 500;
-  font-size: 2.5rem;
   border-radius: 0.5rem;
   -moz-appearance: textfield;
+  font-size: calc(15px + 48 * (100vw / 1440));
 }
 
 .donation__input::-webkit-outer-spin-button,
@@ -848,7 +848,7 @@ h3 {
 
 .donation__currency {
   opacity: 0.5;
-  font-size: 1.25rem;
+  font-size: 0.625rem;
 }
 
 .donation__text {
@@ -1370,6 +1370,16 @@ body:not(.user-is-tabbing) .copy-btn:focus {
   }
 }
 
+@media (min-width: 23.125em) {
+  .donation__input {
+    font-size: calc(19px + 44 * (100vw / 1440));
+  }
+
+  .donation__currency {
+    font-size: calc(11px + 19 * (100vw / 1440));
+  }
+}
+
 @media (min-width: 23.75em) {
   .transaction__title {
     font-size: 1.25rem;
@@ -1452,6 +1462,14 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 }
 
 @media (min-width: 43.75em) {
+  .donation__input {
+    font-size: calc(19px + 29 * (100vw / 1440));
+  }
+
+  .donation__currency {
+    font-size: calc(0px + 32 * (100vw / 1440));
+  }
+
   .donation {
     margin: 0 0 -0.0625rem -0.0625rem;
   }
@@ -1606,8 +1624,8 @@ body:not(.user-is-tabbing) .copy-btn:focus {
     grid-template-columns: 39.939024% 55.792683%;
   }
 
-  .donation__currency {
-    font-size: 1.5rem;
+  .donation__input {
+    font-size: calc(0px + 48 * (100vw / 1440));
   }
 
   .donation__text:not(:last-child) {
@@ -1998,14 +2016,6 @@ body:not(.user-is-tabbing) .copy-btn:focus {
     margin-bottom: 1.5rem;
   }
 
-  .donation__input {
-    font-size: 3rem;
-  }
-
-  .donation__currency {
-    font-size: 2rem;
-  }
-
   .donation__text {
     font-size: 0.875rem;
     line-height: 2;
@@ -2149,6 +2159,14 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 
   .goal.page__goal {
     width: 34.25rem;
+  }
+
+  .donation__input {
+    font-size: 3rem;
+  }
+
+  .donation__currency {
+    font-size: 2rem;
   }
 
   .prize__picture {
