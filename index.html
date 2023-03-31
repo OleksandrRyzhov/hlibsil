@@ -181,21 +181,21 @@
 											<p class="donation__title title-3">Карткою</p>
 											<p class="donation__tag">1 напій = 10 USDT</p>
 										</div>
-										<form class="donation__form">
+										<form class="donation__form" id="donateForm" action="./">
 											<div class="donation__sum">
 												<label for="donateSum">Введіть або оберіть суму пожертви</label>
-												<input class="donation__input" id="donateSum" value="0" type="text" maxlength="12" required>
+												<input class="donation__input" id="donateSum" type="number" value="0" required>
 												<span class="donation__currency">UAH</span>
 											</div>
 											<p class="donation__text">Оберіть скількох кацапів Ви хочете пригостити:</p>
 											<div class="donation__options">
-												<button class="donation__option" type="button" value="0.5">0,5</button>
-												<button class="donation__option" type="button" value="1">1</button>
-												<button class="donation__option" type="button" value="5">5</button>
-												<button class="donation__option" type="button" value="10">10</button>
-												<button class="donation__option" type="button" value="50">50</button>
+												<button class="donation__option" type="button" value="5">0,5</button>
+												<button class="donation__option" type="button" value="10">1</button>
+												<button class="donation__option" type="button" value="50">5</button>
+												<button class="donation__option" type="button" value="100">10</button>
+												<button class="donation__option" type="button" value="500">50</button>
 											</div>
-											<button class="btn btn--support" type="button">Підтримати</button>
+											<button class="btn btn--support" id="donateSubmit" type="submit" disabled="disabled">Підтримати</button>
 										</form>
 									</div>
 									<div class="requisites__card card">

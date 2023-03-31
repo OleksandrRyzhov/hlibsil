@@ -302,6 +302,11 @@ h3 {
   background-color: var(--blueActiveColor);
 }
 
+.btn--support:disabled {
+  background-color: #f3f2f5;
+  color: #dad7e0;
+}
+
 .header .btn--support {
   width: -moz-max-content;
   width: max-content;
@@ -2246,6 +2251,12 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 
   .btn--support:active {
     background-color: var(--blueActiveColor);
+  }
+
+  .btn--support:disabled {
+    background-color: #f3f2f5;
+    color: #dad7e0;
+    cursor: not-allowed;
   }
 
   .menu__link:hover {
