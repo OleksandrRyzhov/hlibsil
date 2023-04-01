@@ -1268,8 +1268,6 @@ body:not(.user-is-tabbing) .copy-btn:focus {
   background: rgba(85, 85, 85, 0.2);
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
-  overflow-y: auto;
-  transition: all 0.2s;
   visibility: hidden;
   opacity: 0;
   z-index: 50;
@@ -1281,12 +1279,15 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 }
 
 .popup__body {
+  background-color: transparent;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
+  max-width: 100%;
+  max-height: none;
+  width: 100%;
+  margin: auto;
+  overflow: auto;
   padding: 1.875rem 1.25rem;
+  transition: all 0.2s;
 }
 
 .popup__content {
@@ -1294,10 +1295,14 @@ body:not(.user-is-tabbing) .copy-btn:focus {
   border-radius: 0.625rem;
   max-width: 28.125rem;
   padding: 1.875rem 0.75rem;
+  height: 100%;
+  height: -moz-max-content;
+  height: max-content;
   position: relative;
   transition: all 0.3s;
   opacity: 0;
   transform: scale(0.8);
+  margin: auto;
 }
 
 .is-active .popup__content {
@@ -1348,7 +1353,8 @@ body:not(.user-is-tabbing) .copy-btn:focus {
 }
 
 .popup__picture {
-  max-width: 100%;
+  min-width: 100%;
+  aspect-ratio: 408/414;
   height: 100%;
 }
 
