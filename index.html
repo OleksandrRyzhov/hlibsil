@@ -23,10 +23,10 @@
 						<button class="menu__icon icon-menu" type="button" aria-label="Меню"><span></span></button>
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a class="menu__link" data-goto=".about" href="#about">Хто ми</a></li>
-									<li class="menu__item"><a class="menu__link" data-goto=".requisites" href="#requisites">Збір</a></li>
-									<li class="menu__item menu__item--mobile"><a class="menu__link" data-goto=".card" href="#card">Реквізити</a></li>
-									<li class="menu__item"><a class="menu__link" data-goto=".faq" href="#faq">Питання-відповіді</a></li>
+								<li class="menu__item"><a class="menu__link" href="#about">Хто ми</a></li>
+									<li class="menu__item"><a class="menu__link" href="#requisites">Збір</a></li>
+									<li class="menu__item menu__item--mobile"><a class="menu__link" href="#card">Реквізити</a></li>
+									<li class="menu__item"><a class="menu__link" href="#faq">Питання-відповіді</a></li>
 							</ul>
 							<div class="switch-language__body" data-da=".switch-language,600" data-spoilers>
 								<button class="switch-language__btn _icon-lang" data-spoiler type="button" aria-label="Змінити мову">UA</button>
@@ -39,7 +39,7 @@
 									</li>
 								</ul>
 							</div>
-							<button class="header__btn btn btn--support" data-goto=".requisites" data-da=".header__actions,600" type="button">Підтримати</button>
+							<a class="header__btn btn btn--support" data-da=".header__actions,600" href="#requisites">Підтримати</a>
 						</nav>
 					</div>
 					<div class="header__actions">
@@ -97,7 +97,7 @@
 										</div>
 									</div>
 								</div>
-								<button class="btn btn--support" data-goto=".requisites" type="button">Підтримати</button>
+								<a class="btn btn--support" href="#requisites">Підтримати</a>
 							</div>
 						</div>
 					</section>
@@ -201,7 +201,9 @@
 									<div class="requisites__card card">
 										<div class="card__title title-3">Переказ на карту</div>
 										<div class="card__item">
-											<p class="card__num" id="copyCardText">5375411508927774</p>
+											<label for="copyCardText">Номер картки</label>
+											<input id="copyCardText" type="text" disabled="disabled" value="5375411508927774">
+											<p class="card__num">5375411508927774</p>
 											<button class="copy-btn _icon-copy" id="copyCard" aria-label="Копіювати номер картки"><span class="tooltip" id="copyCardTooltip" role="tooltip">Копіювати</span></button>
 										</div>
 									</div>
@@ -212,7 +214,9 @@
 										<div class="crypto__item">
 											<div class="crypto__info">
 												<p class="crypto__name">XRP:</p>
-												<p class="crypto__address" id="copyXRPText">rM4ryL2c5Ri4XBC7kMH7XAXmn3TWeAaa6L</p>
+												<label for="copyXRPText">XRP адреса</label>
+												<input id="copyXRPText" type="text" disabled="disabled" value="rM4ryL2c5Ri4XBC7kMH7XAXmn3TWeAaa6L">
+												<p class="crypto__address">rM4ryL2c5Ri4XBC7kMH7XAXmn3TWeAaa6L</p>
 											</div>
 											<div class="crypto__actions">
 												<button class="qr-code _icon-qr-scan" id="qrCodeXRPbtn" data-popup="#qrCodeXRP" aria-label="Показати XRP QR-code"><span class="tooltip" id="qrXRPTooltip" role="tooltip">Показати QR-code</span></button>
@@ -222,7 +226,9 @@
 										<div class="crypto__item">
 											<div class="crypto__info">
 												<p class="crypto__name">USDT (TRC 20):</p>
-												<p class="crypto__address" id="copyUSDTText">TCmUQ3ntw5Ma6JLTjutJHoZ22rbEwvEcCU</p>
+												<label for="copyUSDTText">XRP адреса</label>
+												<input id="copyUSDTText" type="text" disabled="disabled" value="TCmUQ3ntw5Ma6JLTjutJHoZ22rbEwvEcCU">
+												<p class="crypto__address">TCmUQ3ntw5Ma6JLTjutJHoZ22rbEwvEcCU</p>
 											</div>
 											<div class="crypto__actions">
 												<button class="qr-code _icon-qr-scan" id="qrCodeUSDTbtn" data-popup="#qrCodeUSDT" aria-label="Показати USDT QR-code"><span class="tooltip" id="qrUSDTTooltip" role="tooltip">Показати QR-code</span></button>
@@ -232,7 +238,9 @@
 										<div class="crypto__item">
 											<div class="crypto__info">
 												<p class="crypto__name">ETH:</p>
-												<p class="crypto__address" id="copyETHText">0xB0f76c1C38409D0b9305284Cc65a79D0b2b84bE1</p>
+												<label for="copyETHText">ETH адреса</label>
+												<input id="copyETHText" type="text" disabled="disabled" value="0xB0f76c1C38409D0b9305284Cc65a79D0b2b84bE1">
+												<p class="crypto__address">0xB0f76c1C38409D0b9305284Cc65a79D0b2b84bE1</p>
 											</div>
 											<div class="crypto__actions">
 												<button class="qr-code _icon-qr-scan" id="qrCodeETHbtn" data-popup="#qrCodeETH" aria-label="Показати ETH QR-code"><span class="tooltip" id="qrETHTooltip" role="tooltip">Показати QR-code</span></button>
@@ -242,7 +250,9 @@
 										<div class="crypto__item">
 											<div class="crypto__info">
 												<p class="crypto__name">BTC:</p>
-												<p class="crypto__address" id="copyBTCText">bc1qwmgy2wjcu49vrmq88ht9mxntweqsak0c8lshmc</p>
+												<label for="copyBTCText">XRP адреса</label>
+												<input id="copyBTCText" type="text" disabled="disabled" value="bc1qwmgy2wjcu49vrmq88ht9mxntweqsak0c8lshmc">
+												<p class="crypto__address">bc1qwmgy2wjcu49vrmq88ht9mxntweqsak0c8lshmc</p>
 											</div>
 											<div class="crypto__actions">
 												<button class="qr-code _icon-qr-scan" id="qrCodeBTCbtn" data-popup="#qrCodeBTC" aria-label="Показати BTC QR-code"><span class="tooltip" id="qrBTCTooltip" role="tooltip">Показати QR-code</span></button>

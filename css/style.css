@@ -935,6 +935,13 @@ h3 {
   gap: 0.625rem;
 }
 
+.crypto__item label,
+.crypto__item input,
+.card__item label,
+.card__item input {
+  display: none;
+}
+
 .crypto__item:not(:last-child),
 .card__item:not(:last-child) {
   margin-bottom: 1rem;
