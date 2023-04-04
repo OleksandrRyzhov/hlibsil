@@ -1318,8 +1318,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1.3125rem;
   height: 2.5625rem;
+  width: 2.5625rem;
   margin: -0.625rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
