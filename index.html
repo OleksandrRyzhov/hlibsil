@@ -24,18 +24,18 @@
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item"><a class="menu__link" data-goto=".about" href="#about">Хто ми</a></li>
-								<li class="menu__item"><a class="menu__link" data-goto=".requisites" href="#requisites">Збір</a></li>
-								<li class="menu__item menu__item--mobile"><a class="menu__link" data-goto=".card" href="#requisites">Реквізити</a></li>
-								<li class="menu__item"><a class="menu__link" data-goto=".faq" href="#faq">Питання-відповіді</a></li>
+									<li class="menu__item"><a class="menu__link" data-goto=".requisites" href="#requisites">Збір</a></li>
+									<li class="menu__item menu__item--mobile"><a class="menu__link" data-goto=".card" href="#card">Реквізити</a></li>
+									<li class="menu__item"><a class="menu__link" data-goto=".faq" href="#faq">Питання-відповіді</a></li>
 							</ul>
 							<div class="switch-language__body" data-da=".switch-language,600" data-spoilers>
 								<button class="switch-language__btn _icon-lang" data-spoiler type="button" aria-label="Змінити мову">UA</button>
 								<ul class="switch-language__list">
-									<li class="switch-language__item">
-										<a class="switch-language__link" href="#" aria-label="Обрати англійську мову">EN</a>
+									<li class="menu-item">
+										<a href="#">EN</a>
 									</li>
-									<li class="switch-language__item active">
-										<p class="switch-language__link">UA</p>
+									<li class="menu-item ">
+										<a href="#">UA</a>
 									</li>
 								</ul>
 							</div>
@@ -122,7 +122,7 @@
 								<source data-srcset="img/about/3CY.webp" srcset="img/1x1.webp" type="image/webp">
 								<img data-src="img/about/3CY.jpg" src="img/1x1.png" alt="Напис на стіні ЗСУ ТУТ">
 							</picture>
-							<p class="about__dare">Якщо Ви потрапили на цю сторінку, у Вас є шанс нам допомогти.</p>
+							<p class="about__motivation">Якщо Ви потрапили на цю сторінку, у Вас є шанс нам допомогти.</p>
 						</div>
 					</section>
 					<div class="page__goal goal">
@@ -354,53 +354,58 @@
 			</footer>
     </div>
     <div class="popup" id="qrCodeXRP" aria-hidden="true">
-      <dialog class="popup__body" id="qrCodeXRPdialog" aria-labelledby="qrCodeXRPTitle" aria-describedby="qrCodeXRPContent">
+      <div class="popup__body">
         <div class="popup__content">
-          <h2 class="popup__title" id="qrCodeXRPTitle">Відскануй qr-code</h2>
-          <picture class="popup__picture" id="qrCodeXRPContent">
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
+          <p class="popup__title">Відскануй qr-code</p>
+          <picture class="popup__picture">
             <source data-srcset="img/popup/qr-xrp.webp" srcset="img/1x1.webp" type="image/webp">
             <img data-src="img/popup/qr-xrp.jpg" src="img/1x1.png" alt="qr-code XRP">
           </picture>
-          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
         </div>
-      </dialog>
+      </div>
     </div>
     <div class="popup" id="qrCodeUSDT" aria-hidden="true">
-      <dialog class="popup__body" id="qrCodeUSDTdialog" aria-labelledby="qrCodeUSDTTitle" aria-describedby="qrCodeUSDTContent">
+      <div class="popup__body">
         <div class="popup__content">
-          <h2 class="popup__title" id="qrCodeUSDTTitle">Відскануй qr-code</h2>
-          <picture class="popup__picture" id="qrCodeUSDTContent">
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
+          <p class="popup__title">Відскануй qr-code</p>
+          <picture class="popup__picture">
             <source data-srcset="img/popup/qr-usdt.webp" srcset="img/1x1.webp" type="image/webp">
             <img data-src="img/popup/qr-usdt.jpg" src="img/1x1.png" alt="qr-code USDT">
           </picture>
-          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
         </div>
-      </dialog>
+      </div>
     </div>
     <div class="popup" id="qrCodeETH" aria-hidden="true">
-      <dialog class="popup__body" id="qrCodeETHdialog" aria-labelledby="qrCodeETHTitle" aria-describedby="qrCodeETHContent">
+      <div class="popup__body">
         <div class="popup__content">
-          <h2 class="popup__title" id="qrCodeETHTitle">Відскануй qr-code</h2>
-          <picture class="popup__picture" id="qrCodeETHContent">
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
+          <p class="popup__title">Відскануй qr-code</p>
+          <picture class="popup__picture">
             <source data-srcset="img/popup/qr-eth.webp" srcset="img/1x1.webp" type="image/webp">
             <img data-src="img/popup/qr-eth.jpg" src="img/1x1.png" alt="qr-code ETH">
           </picture>
-          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
         </div>
-      </dialog>
+      </div>
     </div>
     <div class="popup" id="qrCodeBTC" aria-hidden="true">
-      <dialog class="popup__body" id="qrCodeBTCdialog" aria-labelledby="qrCodeBTCTitle" aria-describedby="qrCodeBTCContent">
+      <div class="popup__body">
         <div class="popup__content">
-          <h2 class="popup__title" id="qrCodeBTCTitle">Відскануй qr-code</h2>
-          <picture class="popup__picture" id="qrCodeBTCContent">
+          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
+          <p class="popup__title">Відскануй qr-code</p>
+          <picture class="popup__picture">
             <source data-srcset="img/popup/qr-btc.webp" srcset="img/1x1.webp" type="image/webp">
             <img data-src="img/popup/qr-btc.jpg" src="img/1x1.png" alt="qr-code BTC">
           </picture>
-          <button class="popup__btn-close popup-close" aria-label="Закрити qr-code"></button>
         </div>
-      </dialog>
+      </div>
     </div>
-    <script src="js/app.min.js"></script>
+    <script type='text/javascript' id='main-js-extra'>
+	/* <![CDATA[ */
+	var WPJS = {"date":"2023-07-01"};
+	/* ]]> */
+	</script>
+<script src="js/app.min.js" id='main-js'></script>
   </body>
 </html>

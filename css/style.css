@@ -382,24 +382,23 @@ h3 {
 }
 
 .logo {
-  height: 100%;
   border-radius: 0.5rem;
 }
 
 .logo__img {
   display: block;
+  aspect-ratio: 1/1;
 }
 
 .logo__img img {
-  width: 6.25rem;
-  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
 }
 
 .logo__text {
   font-family: e-LOGO;
   padding: 0 0.5rem;
   font-size: 0.75rem;
-  white-space: nowrap;
 }
 
 .header {
@@ -421,7 +420,7 @@ h3 {
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .header__logo {
@@ -480,10 +479,12 @@ h3 {
   margin: 0 -1.25rem 0 -1.875rem;
 }
 
+.menu__list .menu-item,
 .menu__item {
   width: 100%;
 }
 
+.menu .menu__list a,
 .menu__link {
   display: block;
   font-size: 0.875rem;
@@ -493,6 +494,7 @@ h3 {
   transition: color 0.3s, background-color 0.3s;
 }
 
+.menu .menu__list a:active,
 .menu__link:active {
   background-color: var(--pageBgColor);
 }
@@ -509,6 +511,10 @@ h3 {
   gap: 1.5rem;
   border-radius: 1.25rem 1.25rem 0 0;
   background-color: var(--whiteColor);
+}
+
+.footer__logo .logo__img {
+  width: 6.25rem;
 }
 
 .footer__text {
@@ -529,6 +535,7 @@ h3 {
   display: none;
 }
 
+.switch-language__list .menu-item,
 .switch-language__item {
   font-weight: 500;
   font-size: 0.875rem;
@@ -536,16 +543,25 @@ h3 {
   text-transform: uppercase;
 }
 
+.switch-language__list .menu-item:last-child,
 .switch-language__item:last-child {
   margin-left: -0.625rem;
 }
 
+.switch-language__list .menu-item.active,
 .switch-language__item.active {
   color: var(--blueColor);
   cursor: default;
 }
 
+.switch-language__list .menu-item.current-menu-item,
+.switch-language__item.current-menu-item {
+  pointer-events: none;
+}
+
+.switch-language__list .menu-item a,
 .switch-language__link {
+  display: block;
   border-radius: 0.5rem;
   padding: 0.875rem 0.625rem;
   transition: color 0.3s, background-color 0.3s;
@@ -678,6 +694,7 @@ h3 {
 }
 
 .top__title {
+  text-transform: uppercase;
   color: var(--darkBlueColor);
 }
 
@@ -731,7 +748,7 @@ h3 {
   border-radius: 1.25rem;
 }
 
-.about__dare {
+.about__motivation {
   font-weight: 500;
   line-height: 1.25;
   padding: 1.25rem;
@@ -942,6 +959,7 @@ h3 {
 }
 
 .crypto__name {
+  text-transform: uppercase;
   margin-bottom: 0.1875rem;
 }
 
@@ -1254,9 +1272,14 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(85, 85, 85, 0.2);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
   visibility: hidden;
   opacity: 0;
   z-index: 50;
+  overflow: auto;
+  transition: all 0.3s;
 }
 
 .popup.is-active {
@@ -1265,20 +1288,11 @@ h3 {
 }
 
 .popup__body {
-  background-color: transparent;
-  position: relative;
-  max-width: 100%;
-  max-height: 100vh;
-  margin: auto;
-  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
   padding: 1.25rem;
-  transition: all 0.2s;
-}
-
-.popup__body::backdrop {
-  background: rgba(85, 85, 85, 0.2);
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
 }
 
 .popup__content {
@@ -1286,17 +1300,15 @@ h3 {
   border-radius: 0.625rem;
   max-width: 28.125rem;
   padding: 1.875rem 0.75rem;
-  height: 100%;
-  height: -moz-max-content;
-  height: max-content;
   position: relative;
-  transition: all 0.3s;
+  opacity: 0;
   transform: scale(0.8);
-  margin: auto;
+  transition: all 0.3s;
 }
 
 .is-active .popup__content {
   transform: scale(1);
+  opacity: 1;
 }
 
 .popup__btn-close {
@@ -1431,14 +1443,17 @@ h3 {
     padding: 1.5rem 1.25rem 0.875rem;
   }
 
+  .switch-language__list .menu-item:last-child,
   .switch-language__item:last-child {
     margin: 0;
   }
 
+  .switch-language__list .menu-item:not(:last-child),
   .switch-language__item:not(:last-child) {
     margin-bottom: 1rem;
   }
 
+  .switch-language__list .menu-item a,
   .switch-language__link {
     padding: 0.625rem 0.75rem;
   }
@@ -1508,7 +1523,8 @@ h3 {
   }
 
   .header__logo {
-    margin-right: 5.875rem;
+    margin-right: 0;
+    width: 13.75rem;
   }
 
   .menu {
@@ -1533,15 +1549,18 @@ h3 {
     margin: 0;
   }
 
+  .menu__list .menu-item,
   .menu__item {
     width: auto;
     padding: 0;
   }
 
+  .menu__list .menu-item--mobile,
   .menu__item--mobile {
     display: none;
   }
 
+  .menu .menu__list a,
   .menu__link {
     padding: 0.3125rem 0.3125rem;
     border-radius: 0.5rem;
@@ -1594,7 +1613,7 @@ h3 {
     line-height: 1.4;
   }
 
-  .about__dare {
+  .about__motivation {
     font-size: 1.125rem;
     line-height: 1.3333333333;
     padding: 1.5rem 1.25rem;
@@ -1742,6 +1761,7 @@ h3 {
 }
 
 @media (min-width: 54.375em) {
+  .menu .menu__list a:active,
   .menu__link:active {
     color: #70bcff;
     background-color: transparent;
@@ -1752,6 +1772,7 @@ h3 {
     background-color: transparent;
   }
 
+  .switch-language__list .menu-item a:active,
   .switch-language__link:active {
     color: #70bcff;
     background-color: transparent;
@@ -1846,12 +1867,8 @@ h3 {
     padding: 0.9375rem 0;
   }
 
-  .header.hide {
-    transform: translate(0, -5.625rem);
-  }
-
   .header__logo {
-    margin-right: 3.5rem;
+    width: 15.3125rem;
   }
 
   .header__logo img {
@@ -1862,6 +1879,7 @@ h3 {
     gap: 1.25rem;
   }
 
+  .menu .menu__list a,
   .menu__link {
     padding: 0.75rem;
     font-size: 1rem;
@@ -1872,7 +1890,7 @@ h3 {
     padding: 3.75rem 5.875rem 5rem 2.375rem;
   }
 
-  .footer__logo img {
+  .footer__logo .logo__img {
     width: 7.5rem;
   }
 
@@ -1893,11 +1911,13 @@ h3 {
     top: 4.625rem;
   }
 
+  .switch-language__list .menu-item,
   .switch-language__item {
     font-size: 1.0625rem;
     line-height: 1.5294117647;
   }
 
+  .switch-language__list .menu-item a,
   .switch-language__link {
     padding: 0.625rem 1rem;
   }
@@ -1982,7 +2002,7 @@ h3 {
     border-radius: 1.875rem;
   }
 
-  .about__dare {
+  .about__motivation {
     font-size: 1.375rem;
     line-height: 1.4545454545;
     padding: 2.5rem 1.5rem;
@@ -2131,6 +2151,7 @@ h3 {
     width: auto;
     max-width: 31.25rem;
     margin: 0;
+    margin-bottom: auto;
   }
 
   .top__titles {
@@ -2144,6 +2165,7 @@ h3 {
          column-gap: 0.5625rem;
   }
 
+  .menu .menu__list a,
   .menu__link {
     padding: 0.5rem 0.75rem;
   }
@@ -2275,10 +2297,12 @@ h3 {
     cursor: not-allowed;
   }
 
+  .menu .menu__list a:hover,
   .menu__link:hover {
     color: var(--blueColor);
   }
 
+  .menu .menu__list a:active,
   .menu__link:active {
     color: #70bcff;
   }
@@ -2291,10 +2315,12 @@ h3 {
     color: #70bcff;
   }
 
+  .switch-language__list .menu-item a:hover,
   .switch-language__link:hover {
     color: var(--blueColor);
   }
 
+  .switch-language__list .menu-item a:active,
   .switch-language__link:active {
     color: #70bcff;
   }
